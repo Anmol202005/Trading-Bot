@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Binance Testnet Bot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Binance Testnet Trading Bot</h1>
+
+        <div class="order-section">
+            <h2>Market Order</h2>
+            <input id="market-symbol" placeholder="Symbol e.g. BTCUSDT">
+            <select id="market-side">
+                <option value="BUY">BUY</option>
+                <option value="SELL">SELL</option>
+            </select>
+            <input id="market-qty" type="number" step="0.0001" placeholder="Quantity">
+            <button onclick="placeMarketOrder()">Place Market Order</button>
+            <pre id="market-result"></pre>
+        </div>
+
+        <div class="order-section">
+            <h2>Limit Order</h2>
+            <input id="limit-symbol" placeholder="Symbol e.g. BTCUSDT">
+            <select id="limit-side">
+                <option value="BUY">BUY</option>
+                <option value="SELL">SELL</option>
+            </select>
+            <input id="limit-qty" type="number" step="0.0001" placeholder="Quantity">
+            <input id="limit-price" type="number" step="0.01" placeholder="Price">
+            <button onclick="placeLimitOrder()">Place Limit Order</button>
+            <pre id="limit-result"></pre>
+        </div>
+
+        <div class="order-section">
+            <h2>TWAP Order</h2>
+            <input id="twap-symbol" placeholder="Symbol e.g. BTCUSDT">
+            <select id="twap-side">
+                <option value="BUY">BUY</option>
+                <option value="SELL">SELL</option>
+            </select>
+            <input id="twap-qty" type="number" step="0.0001" placeholder="Total Quantity">
+            <input id="twap-slices" type="number" placeholder="Number of Slices">
+            <input id="twap-interval" type="number" placeholder="Interval (seconds)">
+            <button onclick="placeTWAPOrder()">Place TWAP Order</button>
+            <pre id="twap-result"></pre>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

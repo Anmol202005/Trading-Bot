@@ -1,0 +1,8 @@
+# Core
+requests
+python-dotenv
+python-binance
+
+# FastAPI backend
+fastapi
+uvicorn
